@@ -1,0 +1,1 @@
+{"schema":{"description":"The `Grant` used to authenticate the request","type":{"nullable":"grant"}}}

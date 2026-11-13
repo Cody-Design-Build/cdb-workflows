@@ -1,0 +1,1611 @@
+{
+  "schema": {
+    "object": {
+      "accountNavOrder": {
+        "type": {
+          "nullable": {
+            "arrayOf": "string"
+          }
+        }
+      },
+      "accounts": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "address": {
+        "type": "string"
+      },
+      "billingCard": {
+        "nullable": {
+          "object": {
+            "brand": "",
+            "expiresOn": "",
+            "last4": ""
+          }
+        }
+      },
+      "billingEmailAddress": {
+        "type": "emailAddress"
+      },
+      "calendar": {
+        "input": {
+          "object": {
+            "isToDo": "",
+            "taskAssignedMembershipIds": "",
+            "timeZone": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "nullable": {}
+        }
+      },
+      "childOrganizationConnections": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "city": {
+        "nullable": "string"
+      },
+      "comments": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "contacts": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Contacts for this organization"
+      },
+      "costCodeMappings": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Cost code mappings for this organization"
+      },
+      "costCodes": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "costGroups": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "costInboxDocumentTemplate": {
+        "type": {
+          "nullable": "documentTemplate"
+        }
+      },
+      "costInboxEmailAddress": {
+        "nullable": "emailAddress"
+      },
+      "costInboxIsEnabled": {
+        "type": "boolean"
+      },
+      "costItems": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "costTrackingType": {
+        "type": "costTrackingType"
+      },
+      "costTypeMappings": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Cost type mappings for this organization"
+      },
+      "costTypes": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "country": {
+        "nullable": "string"
+      },
+      "countryCode": {
+        "type": "countryCode"
+      },
+      "county": {
+        "nullable": "string"
+      },
+      "createdAt": {
+        "type": "datetime",
+        "description": "The datetime at which this record was created"
+      },
+      "currencyCode": {
+        "type": "currencyCode"
+      },
+      "customFieldMappings": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Custom field mappings for this organization"
+      },
+      "customFields": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "customNotificationTypes": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "customerSuccessManager": {
+        "nullable": "customerSuccessManager"
+      },
+      "dailyLogs": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "dashboardTiles": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "dashboards": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "dataViews": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "defaultConnectionSharedTypes": {
+        "type": {
+          "nullable": {
+            "arrayOf": "string"
+          }
+        }
+      },
+      "defaultCustomerRole": {
+        "type": {
+          "nullable": "role"
+        }
+      },
+      "defaultJobFolders": {
+        "type": {
+          "arrayOf": "string"
+        }
+      },
+      "defaultJobScheduleIsPublished": {
+        "type": "boolean"
+      },
+      "defaultJobUseSimpleSelections": {
+        "type": "boolean"
+      },
+      "defaultRetainageCostCode": {
+        "type": {
+          "nullable": "costCode"
+        }
+      },
+      "defaultRetainageCostType": {
+        "type": {
+          "nullable": "costType"
+        }
+      },
+      "defaultRetainagePercentage": {
+        "type": "number"
+      },
+      "defaultTaxRate": {
+        "type": {
+          "nullable": "number"
+        }
+      },
+      "defaultVendorRole": {
+        "type": {
+          "nullable": "role"
+        }
+      },
+      "documentPayments": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Document payments for this organization"
+      },
+      "documentTemplates": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Document templates for this organization"
+      },
+      "documents": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "events": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "fileTags": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "files": {
+        "input": {
+          "object": {
+            "asZip": "",
+            "download": "",
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "nullable": {
+            "object": {
+              "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+              "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+              "nodes": "The array of related nodes",
+              "withValues": "The values referenced from the `with` argument",
+              "count": "",
+              "sum": "",
+              "avg": "",
+              "min": "",
+              "max": "",
+              "values": ""
+            }
+          }
+        }
+      },
+      "financingProvider": {
+        "type": {
+          "oneOf": {
+            "acorn": {},
+            "hfs": {}
+          }
+        }
+      },
+      "formSubmissions": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Form submissions for this organization"
+      },
+      "formattedAddress": {
+        "type": {
+          "nullable": "string"
+        }
+      },
+      "forms": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Forms for this organization"
+      },
+      "id": {
+        "description": "A randomly-generated unique identifier for this record",
+        "type": "jobtreadId"
+      },
+      "invoices": {
+        "input": {
+          "object": {
+            "created": "",
+            "page": "",
+            "size": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "",
+            "nodes": ""
+          }
+        }
+      },
+      "isGlobal": {
+        "type": "boolean"
+      },
+      "jobNavOrder": {
+        "type": {
+          "nullable": {
+            "arrayOf": "string"
+          }
+        }
+      },
+      "jobSpecificationsQuantityType": {
+        "type": {
+          "nullable": {
+            "oneOf": {
+              "approvedQuantity": {},
+              "committedQuantity": {},
+              "quantity": {}
+            }
+          }
+        }
+      },
+      "jobs": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Jobs for this organization"
+      },
+      "languageCode": {
+        "type": "languageCode"
+      },
+      "lastActiveAt": {
+        "nullable": "datetime"
+      },
+      "latitude": {
+        "type": "number",
+        "typeInput": {
+          "gte": -90,
+          "lte": 90
+        }
+      },
+      "locations": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "logoUploadRequest": {
+        "input": {
+          "object": {
+            "size": "",
+            "type": ""
+          }
+        },
+        "type": {
+          "nullable": "uploadRequest"
+        }
+      },
+      "logoUrl": {
+        "input": {
+          "object": {
+            "size": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "nullable": "url"
+        }
+      },
+      "longitude": {
+        "type": "number",
+        "typeInput": {
+          "gte": -180,
+          "lte": 180
+        }
+      },
+      "memberships": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "minimumSeats": {
+        "nullable": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "navOrder": {
+        "type": {
+          "nullable": {
+            "arrayOf": "string"
+          }
+        }
+      },
+      "nextRecordNumber": {
+        "type": "string"
+      },
+      "nonWorkingDates": {
+        "type": {
+          "arrayOf": "date",
+          "maxLength": 100
+        }
+      },
+      "onEphemeralEventCreated": {
+        "description": "Initiate a stream that responds when new ephemeral organization events are created",
+        "input": {
+          "object": {
+            "scope": "",
+            "types": ""
+          },
+          "defaultValue": {}
+        },
+        "type": "root"
+      },
+      "onEventCreated": {
+        "description": "Initiate a stream that responds when new events are created",
+        "input": {
+          "object": {
+            "scope": "",
+            "types": ""
+          },
+          "defaultValue": {}
+        },
+        "type": "root"
+      },
+      "parameters": {
+        "type": {
+          "nullable": {
+            "arrayOf": {}
+          }
+        }
+      },
+      "parentOrganizationConnections": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "payments": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Payments for this organization"
+      },
+      "poolcorpIntegration": {
+        "nullable": "poolcorpIntegration"
+      },
+      "poolcorpIntegrationOauthUrl": "url",
+      "postalCode": {
+        "nullable": "string"
+      },
+      "primaryColor": {
+        "type": "color"
+      },
+      "qbdIntegration": {
+        "nullable": "qbdIntegration"
+      },
+      "remainingSetupTasks": {
+        "type": {
+          "arrayOf": "setupTask"
+        }
+      },
+      "requireTimeEntryCostItem": {
+        "type": "boolean"
+      },
+      "roles": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "secondaryColor": {
+        "type": "color"
+      },
+      "showDailyLogs": {
+        "type": "boolean"
+      },
+      "showForms": {
+        "type": "boolean"
+      },
+      "showJobSpecifications": {
+        "type": "boolean"
+      },
+      "showPaymentApplications": {
+        "type": "boolean"
+      },
+      "showPlans": {
+        "type": "boolean"
+      },
+      "showSelections": {
+        "type": "boolean"
+      },
+      "showTasks": {
+        "type": "boolean"
+      },
+      "showTime": {
+        "type": "boolean"
+      },
+      "showToDos": {
+        "type": "boolean"
+      },
+      "showWeather": {
+        "type": "boolean"
+      },
+      "slug": {
+        "type": {
+          "nullable": "string"
+        }
+      },
+      "state": {
+        "nullable": "string"
+      },
+      "street": {
+        "nullable": "string"
+      },
+      "supplierCostAdjustment": {
+        "type": "number"
+      },
+      "taskTemplates": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Task templates for this organization"
+      },
+      "taskTypeMappings": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Task type mappings for this organization"
+      },
+      "taskTypes": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "tasks": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "timeEntries": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "timeEntryBreakDurations": {
+        "type": {
+          "arrayOf": "int"
+        }
+      },
+      "timeEntryOvertimeTypes": {
+        "type": {
+          "arrayOf": {
+            "object": {
+              "name": "",
+              "minutes": "",
+              "interval": ""
+            }
+          }
+        }
+      },
+      "timeEntryStartDayOfWeek": {
+        "type": "int"
+      },
+      "timeEntryTypeNames": {
+        "arrayOf": "string"
+      },
+      "timeZone": {
+        "type": "timeZone"
+      },
+      "unitMappings": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        },
+        "description": "Unit mappings for this organization"
+      },
+      "units": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "upcomingInvoice": {
+        "nullable": {}
+      },
+      "url": {
+        "type": {
+          "nullable": "url"
+        }
+      },
+      "webForms": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "webhooks": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "workflowActionType": {
+        "input": {
+          "object": {
+            "id": ""
+          }
+        },
+        "type": {
+          "nullable": "workflowActionType"
+        }
+      },
+      "workflowActionTypes": {
+        "arrayOf": "workflowActionType"
+      },
+      "workflowRunNotificationEmailAddresses": {
+        "type": {
+          "nullable": {
+            "arrayOf": "emailAddress"
+          }
+        }
+      },
+      "workflowRuns": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "workflowTriggerType": {
+        "input": {
+          "object": {
+            "id": "",
+            "input": ""
+          }
+        },
+        "type": {
+          "nullable": "workflowTriggerType"
+        }
+      },
+      "workflowTriggerTypes": {
+        "arrayOf": "workflowTriggerType"
+      },
+      "workflows": {
+        "input": {
+          "object": {
+            "page": "",
+            "with": "",
+            "expressions": "",
+            "where": "",
+            "size": "",
+            "group": "",
+            "sortBy": ""
+          },
+          "defaultValue": {}
+        },
+        "type": {
+          "object": {
+            "nextPage": "A token to retrieve the next page of nodes. If `null`, there are no more nodes.",
+            "previousPage": "A token to retrieve the previous page of nodes. If `null`, there are no previous nodes.",
+            "nodes": "The array of related nodes",
+            "withValues": "The values referenced from the `with` argument",
+            "count": "",
+            "sum": "",
+            "avg": "",
+            "min": "",
+            "max": "",
+            "values": ""
+          }
+        }
+      },
+      "workingDaysOfWeek": {
+        "type": {
+          "arrayOf": {
+            "type": "int",
+            "typeInput": {
+              "gte": 1,
+              "lte": 7
+            }
+          },
+          "minLength": 1,
+          "maxLength": 7
+        }
+      }
+    }
+  }
+}

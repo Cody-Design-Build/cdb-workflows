@@ -1,0 +1,32 @@
+[
+  {
+    "name": "query",
+    "title": "Query the JobTread API",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    },
+    "execution": null,
+    "outputSchema": null,
+    "icons": null,
+    "annotations": {
+      "title": "Query the JobTread API",
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": true
+    },
+    "_meta": {
+      "fastmcp": {
+        "tags": []
+      }
+    }
+  }
+]

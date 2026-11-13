@@ -1,0 +1,53 @@
+# Local secrets and authorization state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*access-token*
+*client-secret*
+oauth/
+oauth-*/
+credentials/
+secrets/
+
+# Machine-local agent and service configuration
+.agents/
+.claude/
+.codex/
+.hermes/
+.omp/
+.opencode/
+.mcp.json
+mcp.json
+opencode.json
+opencode.jsonc
+local/
+private/
+
+# Raw captures, customer records, sessions, and backups
+captures/
+customer-records/
+sessions/
+logs/
+backups/
+*.log
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.backup
+*~
+
+# Python and editor artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+.DS_Store
