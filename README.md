@@ -11,6 +11,7 @@ These are CDB-specific workflows, not generic JobTread defaults or an official J
 | `jobtread` | Connection discovery, permissions, safe operations, verification, and vendor order/bill/payment workflows |
 | `jobtread-budget-writing` | CDB budget names, customer-facing scope, allowances, inclusions, exclusions, and group descriptions |
 | `jobtread-catalog-standards` | CDB reusable catalog scope, naming and catalog-rebuild approval rules |
+| `jobtread-job-setup` | Required new-job intake, customer/owner/property setup, plans, Dropbox and verification handoff |
 
 Keep these skills together: writing and catalog rules depend on the operating skill’s discovery and business-safety rules.
 

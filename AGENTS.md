@@ -4,11 +4,12 @@ This repository is the canonical maintained source for the public CDB JobTread w
 
 ## Scope and ownership
 
-Maintain these three skills and their supporting repository tooling/documentation:
+Maintain these four skills and their supporting repository tooling/documentation:
 
 - `skills/jobtread`: tool discovery, permissions, operation safety, verification, and vendor order/bill/payment procedures
 - `skills/jobtread-budget-writing`: CDB budget language, scope, allowances, inclusions/exclusions, and group summaries
 - `skills/jobtread-catalog-standards`: CDB reusable catalog scope, naming and catalog-rebuild approval rules
+- `skills/jobtread-job-setup`: required new-job intake, owners and contacts, property/job creation, plans, Dropbox and verification handoff
 
 Keep each rule in its owning skill and link to it from other skills. Preserve the intended CDB policy when removing private examples or machine-specific details. Do not broaden this library into generic machine administration instructions.
 

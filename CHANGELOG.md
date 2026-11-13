@@ -2,6 +2,12 @@
 
 Record user-visible changes to the public CDB JobTread workflow library. Unreleased entries do not imply a published release tag.
 
+## Unreleased
+
+- Add required `jobtread-job-setup` workflow for sourced intake, duplicate-safe customer/contact/property/job setup, plans, Dropbox reconciliation and a four-part handoff.
+- Install the new workflow through shared and selected client discovery; link it from the general JobTread operating skill.
+- Add offline setup-policy and installer regression checks; no live business-workflow coverage is implied.
+
 ## 0.1.0 - 2026-11-13
 
 ### Added

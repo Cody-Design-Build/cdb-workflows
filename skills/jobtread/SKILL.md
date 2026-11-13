@@ -15,6 +15,8 @@ Use this skill for all CDB JobTread work, including vendor bids, orders/subcontr
 
 For any vendor-order, vendor-bill, subcontractor-compliance or payment task, **read `references/vendor-orders-bills-payments.md` before acting**. The CDB sequence is optional bid request → accepted vendor order/subcontract agreement → vendor bill → recorded payments applied to that bill. Complete every stage requested; an order alone never satisfies a request for a bill. Manual approval, actual signatures, payment readiness and historical bookkeeping are distinct.
 
+For every new-job request or incomplete job setup, you **must follow** [jobtread-job-setup](../jobtread-job-setup/SKILL.md), including duplicate checks, owner/property intake, plans, Dropbox reconciliation and the four-part verification handoff. Do not bypass it when the user has already created some records.
+
 ## Connection and setup
 
 Connect to the official remote MCP at `https://api.jobtread.com/mcp` using your agent's supported authenticated connector. See [connection instructions](../../docs/CONNECTING.md). Each installation needs its own connection and authorization; this repository contains no credentials or transferable grants.

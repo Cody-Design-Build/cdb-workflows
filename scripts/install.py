@@ -6,7 +6,7 @@ from pathlib import Path
 import shutil
 import sys
 
-SKILLS = ("jobtread", "jobtread-budget-writing", "jobtread-catalog-standards")
+SKILLS = ("jobtread", "jobtread-budget-writing", "jobtread-catalog-standards", "jobtread-job-setup")
 AGENTS = ("shared", "hermes", "codex", "claude", "omp", "opencode")
 
 

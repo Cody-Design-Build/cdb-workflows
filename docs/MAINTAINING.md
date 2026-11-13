@@ -1,6 +1,6 @@
 # Maintain and release the workflow library
 
-Maintain CDB’s three JobTread skills in this repository, review public/private boundaries, and release only the evidence you can support. [AGENTS.md](../AGENTS.md) owns repository policy; this guide covers the maintenance procedure.
+Maintain CDB’s four JobTread skills in this repository, review public/private boundaries, and release only the evidence you can support. [AGENTS.md](../AGENTS.md) owns repository policy; this guide covers the maintenance procedure.
 
 ## Change the canonical source
 
