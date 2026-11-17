@@ -4,6 +4,11 @@ Record user-visible changes to the public CDB company workflow library. Unreleas
 
 ## Unreleased
 
+- Add independently usable `cdb-company-memory`, `cdb-task-management` and `cdb-operations` procedures with explicit contracts, consequence-based approvals, incremental coverage/receipts, correction/freshness handling and reporting templates.
+- Add a source-grounded Hindsight 1.2.1 stdlib helper for explicit-bank exact GET, synchronous single-item retain/readback, read-only verification and cooperative POSIX foreground locking. No production bank default, automatic retries, business API wrapper or source import/sync.
+- Register all three modules in the filesystem installer; document tested synthetic helper behavior and limitations separately from unproven company operations.
+- Align Surface Context and authorized email continuity with Hindsight-first ownership while preserving human notes, historical checkpoints and the existing read-only triage mandate. No cron/services/config, business records, memory routing or publication changes.
+
 - Broaden the canonical library to general CDB company workflows and modular integrations without claiming a company-operations orchestrator is implemented.
 - Register Matt Pocock's `grill-with-docs`, `grilling` and `domain-modeling` skills for installation; preserve their dependency links, original licenses and provenance. No `grill-me` module is included.
 - Migrate `email-inbox-triage` and `cdb-surface-orders` with original names, attribution and MIT notices; sanitize private identities, project paths and supplier anecdotes while keeping reusable policy and private checkpoint compatibility.

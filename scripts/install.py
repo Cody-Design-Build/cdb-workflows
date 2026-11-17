@@ -10,6 +10,7 @@ SKILLS = (
     "jobtread", "jobtread-budget-writing", "jobtread-catalog-standards",
     "jobtread-job-setup", "cdb-dropbox-management", "email-inbox-triage",
     "cdb-surface-orders", "grill-with-docs", "grilling", "domain-modeling",
+    "cdb-company-memory", "cdb-task-management", "cdb-operations",
 )
 AGENTS = ("shared", "hermes", "codex", "claude", "omp", "opencode")
 

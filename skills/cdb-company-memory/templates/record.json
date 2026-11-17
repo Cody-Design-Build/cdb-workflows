@@ -1,0 +1,14 @@
+{
+  "schema": "cdb-operational-record.v1",
+  "kind": "review-unit",
+  "identity": {"system": "synthetic-provider", "account": "synthetic-account", "id": "synthetic-unit"},
+  "classification": "attributed-claim",
+  "source_at": "2026-01-01T00:00:00Z",
+  "observed_at": "2026-01-01T00:05:00Z",
+  "audience": "authorized-owner",
+  "sources": [{"system": "synthetic-provider", "record_id": "synthetic-message", "version": "synthetic-v1", "locator": "synthetic-only"}],
+  "associations": [{"relation": "concerns", "system": "synthetic-provider", "record_id": "synthetic-task"}],
+  "supersedes": [],
+  "run_id": "synthetic-run",
+  "data": {"disposition": "waiting", "next_actor": "fictional-supplier", "completion_condition": "Evidence still required", "unreviewed_units": ["synthetic-pending-unit"]}
+}

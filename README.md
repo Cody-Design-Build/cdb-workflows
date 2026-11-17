@@ -10,6 +10,9 @@ The table below lists the currently installer-supported modules, not the limit o
 
 | Skill | Purpose |
 | --- | --- |
+| `cdb-company-memory` | Independent Hindsight context, exact evidence/coverage/action receipts and cooperative one-writer protocol |
+| `cdb-task-management` | Match obligations, avoid duplicates, maintain authorized internal tasks and evidence-based completion |
+| `cdb-operations` | Agent-operated company review, prioritization, assisted follow-through and sourced reporting; not an autonomous service |
 | `jobtread` | Connection discovery, permissions, safe operations, verification, and vendor order/bill/payment workflows |
 | `jobtread-budget-writing` | CDB budget names, customer-facing scope, allowances, inclusions, exclusions, and group descriptions |
 | `jobtread-catalog-standards` | CDB reusable catalog scope, naming and catalog-rebuild approval rules |
@@ -22,6 +25,12 @@ The table below lists the currently installer-supported modules, not the limit o
 | `domain-modeling` | Domain-modeling dependency for the document-grounded workflow |
 
 Keep these skills together: writing and catalog rules depend on the operating skill’s discovery and business-safety rules.
+
+## Operations pilot
+
+The three operations modules are usable independently or together by an agent/human with authorized existing connectors. Start read-only; a report request does not authorize business changes. The [memory helper](skills/cdb-company-memory/references/helper.md) provides real explicit-bank exact GET, synchronous retain with readback verification, and a tested POSIX cooperative lock. It has no production bank default and performs no business-system actions. [Module verification and limitations](docs/OPERATIONS-VALIDATION.md) distinguish runtime tests from procedural coverage.
+
+No scheduler, source ingestion/sync, autonomous company-wide runner, page refresh or backup system is installed. Bank routing/configuration and publication are separate owner-controlled work; historical banks remain intact. Existing triage remains read-only. The [design](docs/OPERATIONS-DESIGN.md) and [source review](docs/HINDSIGHT-REVIEW.md) explain the architecture; implemented contracts live in the skills.
 
 ## Install the instructions
 
