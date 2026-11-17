@@ -1,8 +1,10 @@
-# CDB JobTread workflow skills
+# CDB workflows
 
-A public library of Cody Design Build (CDB) operating policies for AI assistants working with JobTread. Install the instructions into your assistant’s filesystem, then connect that assistant to JobTread separately through its official Model Context Protocol (MCP) endpoint.
+A public library of Cody Design Build (CDB) company workflows for AI assistants. The scope includes organization-level operations, modular business procedures, and integration-specific skills for systems such as JobTread, Surface, email and Dropbox. Install reviewed instructions separately from authorizing their integrations.
 
-These are CDB-specific workflows, not generic JobTread defaults or an official JobTread product. Public policy belongs here; customer records, credentials, authorization history, and machine configuration do not.
+These are CDB-specific workflows, not vendor defaults or an official vendor product. Public policy belongs here; customer records, reports, raw email evidence, credentials, authorization history, and private machine state do not.
+
+The table below lists the currently installer-supported modules, not the limit of the repository scope. New modules need documented contracts, scoped tests, and deliberate installer support before being advertised as installed.
 
 ## Choose a skill
 
@@ -12,6 +14,12 @@ These are CDB-specific workflows, not generic JobTread defaults or an official J
 | `jobtread-budget-writing` | CDB budget names, customer-facing scope, allowances, inclusions, exclusions, and group descriptions |
 | `jobtread-catalog-standards` | CDB reusable catalog scope, naming and catalog-rebuild approval rules |
 | `jobtread-job-setup` | Required new-job intake, customer/owner/property setup, plans, Dropbox and verification handoff |
+| `cdb-dropbox-management` | Job folders, document filing, collision/revision safety, stage moves and sync verification |
+| `email-inbox-triage` | Project-aware mailbox coverage, continuity, decision queues and approved replies |
+| `cdb-surface-orders` | Surface procurement discovery, orientation, approved changes and verification |
+| `grill-with-docs` | Document-grounded grilling workflow with its reusable dependencies |
+| `grilling` | Structured questioning dependency for the document-grounded workflow |
+| `domain-modeling` | Domain-modeling dependency for the document-grounded workflow |
 
 Keep these skills together: writing and catalog rules depend on the operating skill’s discovery and business-safety rules.
 
@@ -21,26 +29,28 @@ You need Git, Python 3, and a filesystem-based skills client. Clone into a locat
 
 ```sh
 mkdir -p ~/Work
-git clone https://github.com/Cody-Design-Build/jobtread-skills.git \
-  ~/Work/jobtread-skills
-cd ~/Work/jobtread-skills
+git clone https://github.com/Cody-Design-Build/cdb-workflows.git \
+  ~/Work/cdb-workflows
+cd ~/Work/cdb-workflows
 python3 scripts/install.py
 ```
 
-The default installs shared discovery links under `~/.agents/skills`. It does not authorize JobTread, install a gateway, create credentials, or write MCP connection settings. Restart your assistant or reload its skill discovery after installation.
+The default installs shared discovery links under `~/.agents/skills`. It does not authorize business integrations, install a gateway, create credentials, or write MCP connection settings. Restart your assistant or reload its skill discovery after installation.
 
 Select discovery targets with `--agents`; it accepts a space-separated list:
 
 ```sh
-python3 scripts/install.py --agents shared hermes codex claude omp opencode
+python3 scripts/install.py --agents shared codex claude omp opencode
 ```
+
+For Hermes already configured with `skills.external_dirs: [~/.agents/skills]`, run only the shared installation; no Hermes-local links are needed. `--agents hermes` remains an explicit legacy option for profiles without external discovery and uses the original skill names/categories. Local copies take precedence over external skills: preserve and retire old local directories deliberately, not by overwriting them. See [migration, attribution and module contracts](docs/MIGRATED-SKILLS.md).
 
 Choose only the clients you use; the installer always installs the shared discovery hub first. Read `python3 scripts/install.py --help` before changing an existing installation. Keep the clone available because the installed skills link to it.
 
 The installer refuses conflicting directories or links by default. Inspect and reconcile existing contents before opting into migration:
 
 ```sh
-python3 scripts/install.py --agents shared hermes codex claude omp opencode \
+python3 scripts/install.py --agents shared codex claude omp opencode \
   --migrate
 ```
 
@@ -67,7 +77,7 @@ python3 scripts/install.py
 For a clone tracking its existing branch, inspect incoming changes before updating:
 
 ```sh
-cd ~/Work/jobtread-skills
+cd ~/Work/cdb-workflows
 git status --short
 git fetch origin
 git log --oneline HEAD..@{upstream}
@@ -88,6 +98,6 @@ Before using a connection, complete the read-only verification checklist in [CON
 
 ## Maintain or reuse this library
 
-[AGENTS.md](AGENTS.md) is the canonical repository policy for maintaining all JobTread instructions here. [Maintaining the library](docs/MAINTAINING.md) covers review, provenance, releases, and privacy. Record user-visible changes in [CHANGELOG.md](CHANGELOG.md).
+[AGENTS.md](AGENTS.md) is the canonical repository policy for maintaining all CDB workflows here. [Maintaining the library](docs/MAINTAINING.md) covers review, provenance, releases, and privacy. Record user-visible changes in [CHANGELOG.md](CHANGELOG.md).
 
 Original authored material uses the [MIT license](LICENSE). Upstream JobTread tool descriptions, schemas, documentation, and trademarks retain their respective ownership and terms. Preserve source attribution; the repository’s MIT license does not relicense upstream material.

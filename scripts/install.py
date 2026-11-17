@@ -6,7 +6,11 @@ from pathlib import Path
 import shutil
 import sys
 
-SKILLS = ("jobtread", "jobtread-budget-writing", "jobtread-catalog-standards", "jobtread-job-setup")
+SKILLS = (
+    "jobtread", "jobtread-budget-writing", "jobtread-catalog-standards",
+    "jobtread-job-setup", "cdb-dropbox-management", "email-inbox-triage",
+    "cdb-surface-orders", "grill-with-docs", "grilling", "domain-modeling",
+)
 AGENTS = ("shared", "hermes", "codex", "claude", "omp", "opencode")
 
 
@@ -18,7 +22,11 @@ def destinations(home, agents):
                 path = shared / name
             elif agent == "hermes":
                 base = home / ".hermes/skills"
-                path = base / name if name == "jobtread-catalog-standards" else base / "productivity" / name
+                if name == "jobtread-catalog-standards":
+                    path = base / name
+                else:
+                    category = "email" if name == "email-inbox-triage" else "productivity"
+                    path = base / category / name
             else:
                 base = {
                     "codex": home / ".codex/skills",

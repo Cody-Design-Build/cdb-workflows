@@ -1,10 +1,10 @@
 # Maintain and release the workflow library
 
-Maintain CDB’s four JobTread skills in this repository, review public/private boundaries, and release only the evidence you can support. [AGENTS.md](../AGENTS.md) owns repository policy; this guide covers the maintenance procedure.
+Maintain CDB company workflows and their modular procedures/integrations in this repository, review public/private boundaries, and release only the evidence you can support. [AGENTS.md](../AGENTS.md) owns repository policy; this guide covers the maintenance procedure.
 
 ## Change the canonical source
 
-Work in `~/Work/jobtread-skills`, not an independent copy inside an agent profile. Keep rules in their owning skill and use relative references between repository files. Preserve the CDB-specific operating intent when making instructions portable.
+Work in `~/Work/cdb-workflows`, not an independent copy inside an agent profile. Keep rules in their owning skill and use relative references between repository files. Preserve the CDB-specific operating intent when making instructions portable.
 
 Before changing a procedure:
 
@@ -14,27 +14,29 @@ Before changing a procedure:
 4. Edit the source here, remove obsolete instructions/callers, and update affected docs and `CHANGELOG.md`.
 5. Review the diff for private data, unsupported claims, broken relative references, and client-version assumptions.
 
-Keep changes focused. Do not add unrelated skills, a second JobTread backend, a gateway installer, automatic pushes, or live business mutations as maintenance conveniences.
+Keep changes focused. Company operations, email, Surface and Dropbox procedures are in scope, alongside JobTread. Add modules deliberately with documented inputs, outputs, evidence, coverage and failure behavior. Do not add unrelated skills, a second JobTread backend, a gateway installer, automatic pushes, or live business mutations as maintenance conveniences.
 
 ## Install reviewed edits without losing local work
 
 The filesystem installer links the canonical skills into the shared discovery hub and optional client discovery locations. It does not configure MCP or create credentials:
 
 ```sh
-cd ~/Work/jobtread-skills
-python3 scripts/install.py --agents shared hermes codex claude omp opencode
+cd ~/Work/cdb-workflows
+python3 scripts/install.py --agents shared codex claude omp opencode
 ```
 
-The shared hub is always installed first. The default target is `shared`; choose only the extra clients you need. Re-running with links already pointing to this source is idempotent. Restart the relevant clients or reload skill discovery afterward.
+The shared hub is always installed first. The default target is `shared`; choose only the extra clients you need. Re-running with links already pointing to this source is idempotent. Restart the relevant clients or reload skill discovery afterward. Hermes profiles with `skills.external_dirs` already scanning `~/.agents/skills` need only shared installation, not local symlinks. `--agents hermes` is an explicit legacy option, not a required companion to shared discovery. Never rewrite client configuration or cron during this installation.
 
 If installation reports a conflicting directory or link, inspect it first. Preserve any unique policy before choosing an explicit migration:
 
 ```sh
-python3 scripts/install.py --agents shared hermes codex claude omp opencode \
+python3 scripts/install.py --agents shared codex claude omp opencode \
   --migrate
 ```
 
 `--migrate` backs up conflicts under `~/.local/state/jobtread-skills/backups/`, grouped by timestamp, agent, and skill, before replacing their discovery entries. Review the installer’s reported paths; do not delete backups until you have reconciled local changes. The installer does not overwrite conflicts by default.
+
+For a source migration, inspect every file in each original directory before copying reusable material. Preserve full original private copies under `~/.local/state/cdb-workflows/backups/` before sanitizing public source or retiring local discovery copies. Verify backup bytes and exact shared targets before removing the old local directories; do not leave duplicate local names shadowing external skills. This manual source backup is separate from the installer's historical `jobtread-skills` conflict-backup path. Never bring checkpoints, raw evidence or private backup inventories into the public checkout. See [current migrated modules and attribution](MIGRATED-SKILLS.md).
 
 ## Keep customer data and credentials private
 

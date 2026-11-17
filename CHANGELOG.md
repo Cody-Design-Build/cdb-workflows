@@ -1,8 +1,16 @@
 # Changelog
 
-Record user-visible changes to the public CDB JobTread workflow library. Unreleased entries do not imply a published release tag.
+Record user-visible changes to the public CDB company workflow library. Unreleased entries do not imply a published release tag.
 
 ## Unreleased
+
+- Broaden the canonical library to general CDB company workflows and modular integrations without claiming a company-operations orchestrator is implemented.
+- Register Matt Pocock's `grill-with-docs`, `grilling` and `domain-modeling` skills for installation; preserve their dependency links, original licenses and provenance. No `grill-me` module is included.
+- Migrate `email-inbox-triage` and `cdb-surface-orders` with original names, attribution and MIT notices; sanitize private identities, project paths and supplier anecdotes while keeping reusable policy and private checkpoint compatibility.
+- Add `cdb-dropbox-management` as the owning filing procedure; link job setup and Surface filing to it.
+- Document shared Hermes external discovery and keep `--agents hermes` as an explicit legacy option. Shared-only installation does not create Hermes-local symlinks or edit config/cron.
+- Add offline migration, provenance, targeted privacy and discovery regression checks; retain private original backups outside publication.
+- Align checkout and clone instructions with `Cody-Design-Build/cdb-workflows`. Existing installer backup paths remain unchanged for compatibility.
 
 - Add required `jobtread-job-setup` workflow for sourced intake, duplicate-safe customer/contact/property/job setup, plans, Dropbox reconciliation and a four-part handoff.
 - Install the new workflow through shared and selected client discovery; link it from the general JobTread operating skill.

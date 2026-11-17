@@ -1,17 +1,17 @@
-# Maintain CDB JobTread instructions here
+# Maintain CDB workflows here
 
-This repository is the canonical maintained source for the public CDB JobTread workflow library. Update JobTread operating instructions, budget-writing rules, and catalog standards here, then install the reviewed source through `scripts/install.py`. Do not maintain competing client-specific copies.
+This repository is the canonical maintained source for public CDB company workflows: organization-level operations, modular business procedures, and integration-specific skills. Maintain reusable instructions, scripts, templates and tests here, not in independent client-specific copies. Installation support must be explicit; a skill directory alone does not mean the installer enables it.
 
 ## Scope and ownership
 
-Maintain these four skills and their supporting repository tooling/documentation:
+The current installed JobTread modules are:
 
 - `skills/jobtread`: tool discovery, permissions, operation safety, verification, and vendor order/bill/payment procedures
 - `skills/jobtread-budget-writing`: CDB budget language, scope, allowances, inclusions/exclusions, and group summaries
 - `skills/jobtread-catalog-standards`: CDB reusable catalog scope, naming and catalog-rebuild approval rules
 - `skills/jobtread-job-setup`: required new-job intake, owners and contacts, property/job creation, plans, Dropbox and verification handoff
 
-Keep each rule in its owning skill and link to it from other skills. Preserve the intended CDB policy when removing private examples or machine-specific details. Do not broaden this library into generic machine administration instructions.
+The broader scope includes company operations, email triage, Surface coordination and Dropbox filing as those modules are reviewed and added. Organization-level skills own reconciliation, coverage and prioritization; smaller skills own their business procedures or integrations. Define module inputs, outputs, evidence and failure boundaries; do not duplicate policy between callers. Keep each rule in its owning skill and link to it from other skills. Preserve CDB policy and keep generic machine administration outside this library.
 
 This file governs repository maintenance. It does not grant shell privileges, OAuth access, account permissions, or authorization to change business records. The public CDB library rollout is authorized; do not infer permission for unrelated deployments, business mutations, or automatic pushes.
 

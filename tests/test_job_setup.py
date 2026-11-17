@@ -18,8 +18,8 @@ class JobSetup(unittest.TestCase):
                        'Notifications', 'plan sheets', 'original bytes', 'Dropbox',
                        'reconcile uncertain writes', 'Return four concise sections']:
             self.assertIn(phrase.lower(), text.lower())
-        self.assertNotIn('697 Rhode', text)
-        self.assertNotIn('edward.s.hsu', text)
+        self.assertNotRegex(text, r'\b\d{3,}\s+[A-Z][a-z]+\s+(?:Street|St|Avenue|Ave|Road|Rd)\b')
+        self.assertNotRegex(text, r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}')
 
     def test_general_skill_requires_setup_procedure(self):
         text = (ROOT / 'skills/jobtread/SKILL.md').read_text()

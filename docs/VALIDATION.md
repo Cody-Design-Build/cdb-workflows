@@ -1,5 +1,13 @@
 # Initial rollout verification
 
+## Current module migration checks
+
+The later email/Surface/Dropbox source migration was checked offline with `python3 scripts/validate.py`, `python3 -m unittest discover -s tests -v` (13 passing tests), and `git diff --check`. The source set includes all seven installer-supported modules; migration provenance and limitations are recorded in [MIGRATED-SKILLS.md](MIGRATED-SKILLS.md).
+
+Shared-only installation linked the migrated skills and Dropbox into the canonical checkout. A fresh `hermes skills list --enabled-only` invocation reported `email-inbox-triage`, `cdb-surface-orders` and `cdb-dropbox-management` as enabled external skills after the independent local email/Surface copies were preserved and retired. Full private originals and evidence remain outside publication. No Hermes configuration or cron changes, new credentials, business mutations, commit or push were performed for this migration. This verifies filesystem/discovery behavior, not live business workflow execution or refresh of already-running sessions.
+
+## Original rollout record
+
 Read-only and offline checks performed on 2026-11-13 for the initial CDB workflow-library rollout. This record contains no customer records, credentials or authorization identifiers.
 
 ## Repository and installation
