@@ -1,17 +1,21 @@
 ---
 name: jobtread-budget-writing
-description: Apply CDB budget scope, customer-facing descriptions, cost-group summaries, allowance and pricing presentation rules when creating or revising JobTread budgets.
+description: Write clear CDB budget scope and customer descriptions.
+version: 0.1.0
+author: David Cody, Hermes Agent
 license: MIT
+platforms: [linux, macos, windows]
 metadata:
-  author: Cody Design Build
-  version: "0.1.0"
+  hermes:
+    tags: [JobTread, Construction]
+    related_skills: [jobtread]
 ---
 
 # JobTread Budget Writing
 
 **These are general budget-writing preferences for all new CDB budgets. This skill contains no job-specific scope, exclusions, pricing decisions or project history. Keep those in the relevant project's records, not in this skill.**
 
-Write readable, customer-facing CDB budget scope and group summaries. This skill is the maintained home for terminology, owner-paid planning figures, allowance wording and customer price rounding—not estimating approval or authentication. Use [jobtread](../jobtread/SKILL.md) for discovery, authorization and readback, [budget intake](../jobtread/references/budget-data-intake.md) for source-to-record preparation, and [customer documents](../jobtread/references/customer-documents.md) for proposals and change orders. Scope development must use the project's actual estimating evidence; no additional estimating skill is assumed to be installed.
+Write readable, customer-facing CDB budget scope and group summaries. This skill is the maintained home for terminology, owner-paid planning figures, allowance wording and customer price rounding—not estimating approval or authentication. Use [jobtread](../jobtread/SKILL.md) for discovery, authorization and readback, [budget intake](../jobtread/references/budget-data-intake.md) for source-to-record preparation, and [customer documents](../jobtread/references/customer-documents.md) for proposals and change orders. For developing scope and pricing, load [jobtread-estimating](../jobtread-estimating/SKILL.md) when installed; otherwise identify that missing module before claiming estimating completion. Wording cleanup alone does not require it.
 
 ## Sales-first tone
 
@@ -54,7 +58,7 @@ Creating or reviewing budget item names, descriptions, cost-group headers, inclu
 ## Line items
 
 - Keep names short, concise and scope-specific.
-- As a guideline, describe the work and refer to the building plans rather than prescribing particular products, technologies, or assembly components. Avoid repetitive material lists and unverified commitments such as a drainage mat. Retain specifics when needed to define an approved scope, selection, performance requirement, or genuine boundary; this is not a blanket rule to remove technical requirements. Keep detailed quantities and takeoffs in working records unless needed in the customer scope.
+- Default to one short sentence stating the work and referring to the plans instead of repeating product names, materials, or assembly details already shown there. Use “according to the attached plans” only when the applicable plan set is actually attached; otherwise refer to the project plans without calling them attached. Keep explicit labor and supply responsibilities, scope limits, and agreed requirements or exceptions the plans alone do not communicate. Keep detailed quantities and takeoffs in working records unless needed in the customer scope.
 - Describe trade work by practical coverage such as 'new and affected areas' when that accurately captures the approved scope; avoid unnecessary room-by-room inventories or individual runs. Retain material scope boundaries that prevent a misleading promise, and keep detailed takeoffs in project working records rather than customer-facing descriptions unless needed.
 - Descriptions are forward-facing sales and signable contract wording, not notes to David or an agent. State the actual work directly, preferably in inclusion bullets instead of long comma-separated lists.
 - Preserve quantities, dimensions, specifications, scope limits, supply/install responsibility and meaningful qualifications. Do not expand scope or turn provisional work into an unconditional commitment while simplifying.

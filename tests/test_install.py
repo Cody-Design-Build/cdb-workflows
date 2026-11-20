@@ -38,7 +38,7 @@ class InstallSafety(unittest.TestCase):
         (conflict / "local-notes").write_bytes(b"uncommitted work\x00")
         result = self.run_install("--agents", "shared", "hermes", "codex", "claude", "omp", "opencode", "--migrate")
         self.assertEqual(result.returncode, 0, result.stderr)
-        saved = list((self.home / ".local/state/jobtread-skills/backups").glob("*/shared/jobtread/local-notes"))
+        saved = list((self.home / ".local/state/cdb-workflows/backups").glob("*/shared/jobtread/local-notes"))
         self.assertEqual([p.read_bytes() for p in saved], [b"uncommitted work\x00"])
         for relative in (".agents/skills", ".hermes/skills/productivity", ".codex/skills", ".claude/skills", ".omp/agent/skills", ".config/opencode/skills"):
             for name in ("jobtread", "jobtread-budget-writing"):
@@ -47,7 +47,7 @@ class InstallSafety(unittest.TestCase):
         self.assertEqual((self.home / ".hermes/skills/jobtread-catalog-standards").resolve(), ROOT / "skills/jobtread-catalog-standards")
         again = self.run_install("--agents", "codex", "hermes")
         self.assertEqual(again.returncode, 0, again.stderr)
-        self.assertEqual(len(list((self.home / ".local/state/jobtread-skills/backups").iterdir())), 1)
+        self.assertEqual(len(list((self.home / ".local/state/cdb-workflows/backups").iterdir())), 1)
 
     def test_dangling_link_requires_migration_and_is_preserved(self):
         link = self.home / ".agents/skills/jobtread"
@@ -56,7 +56,7 @@ class InstallSafety(unittest.TestCase):
         self.assertNotEqual(self.run_install().returncode, 0)
         result = self.run_install("--migrate")
         self.assertEqual(result.returncode, 0, result.stderr)
-        saved = list((self.home / ".local/state/jobtread-skills/backups").glob("*/shared/jobtread"))
+        saved = list((self.home / ".local/state/cdb-workflows/backups").glob("*/shared/jobtread"))
         self.assertEqual(len(saved), 1)
         self.assertEqual(os.readlink(saved[0]), "/missing/original-skill")
         self.assertEqual(link.resolve(), ROOT / "skills/jobtread")

@@ -1,6 +1,6 @@
 # Maintain and release the workflow library
 
-Maintain CDB company workflows and their modular procedures/integrations in this repository, review public/private boundaries, and release only the evidence you can support. [AGENTS.md](../AGENTS.md) owns repository policy; this guide covers the maintenance procedure.
+Maintain CDB company workflows and their modular procedures/integrations in this repository, review public/private boundaries, and release only the evidence you can support. The current owner-approved source boundary is recorded in [MAINTAINER.md](../MAINTAINER.md); protected [AGENTS.md](../AGENTS.md) remains unchanged. This guide covers maintenance and preserves the existing safety/privacy rules.
 
 ## Change the canonical source
 
@@ -14,7 +14,7 @@ Before changing a procedure:
 4. Edit the source here, remove obsolete instructions/callers, and update affected docs and `CHANGELOG.md`.
 5. Review the diff for private data, unsupported claims, broken relative references, and client-version assumptions.
 
-Keep changes focused. Company operations, email, Surface and Dropbox procedures are in scope, alongside JobTread. Add modules deliberately with documented inputs, outputs, evidence, coverage and failure behavior. Do not add unrelated skills, a second JobTread backend, a gateway installer, automatic pushes, or live business mutations as maintenance conveniences.
+Keep changes focused. JobTread, estimating, Dropbox and lightweight business-email procedures are in scope. Organization operations, company memory, task orchestration, Surface and heavy triage are maintained only in the owner's separate local operations repository without remote/distribution. The current explicit owner request revises source ownership; protected AGENTS.md files remain untouched. See [MAINTAINER.md](../MAINTAINER.md). Add modules deliberately with documented inputs, outputs, evidence, coverage and failure behavior. Do not add unrelated skills, a second JobTread backend, a gateway installer, automatic pushes, or live business mutations as maintenance conveniences.
 
 ## Install reviewed edits without losing local work
 
@@ -34,7 +34,7 @@ python3 scripts/install.py --agents shared codex claude omp opencode \
   --migrate
 ```
 
-`--migrate` backs up conflicts under `~/.local/state/jobtread-skills/backups/`, grouped by timestamp, agent, and skill, before replacing their discovery entries. Review the installer’s reported paths; do not delete backups until you have reconciled local changes. The installer does not overwrite conflicts by default.
+`--migrate` backs up conflicts under `~/.local/state/cdb-workflows/backups/`, grouped by timestamp, agent, and skill, before replacing their discovery entries. Review the installer’s reported paths; do not delete backups until you have reconciled local changes. The installer does not overwrite conflicts by default.
 
 For a source migration, inspect every file in each original directory before copying reusable material. Preserve full original private copies under `~/.local/state/cdb-workflows/backups/` before sanitizing public source or retiring local discovery copies. Verify backup bytes and exact shared targets before removing the old local directories; do not leave duplicate local names shadowing external skills. This manual source backup is separate from the installer's historical `jobtread-skills` conflict-backup path. Never bring checkpoints, raw evidence or private backup inventories into the public checkout. See [current migrated modules and attribution](MIGRATED-SKILLS.md).
 

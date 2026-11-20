@@ -1,10 +1,14 @@
 ---
 name: jobtread-catalog-standards
-description: Apply CDB reusable cost-catalog scope, naming and rebuild approval rules when planning or editing the JobTread catalog and applying it to job budgets.
+description: Maintain reusable CDB cost-catalog scope safely.
+version: 0.1.0
+author: David Cody, Hermes Agent
 license: MIT
+platforms: [linux, macos, windows]
 metadata:
-  author: Cody Design Build
-  version: "0.1.0"
+  hermes:
+    tags: [JobTread, Construction]
+    related_skills: [jobtread]
 ---
 
 # CDB catalog standards
@@ -22,3 +26,15 @@ Load alongside [jobtread](../jobtread/SKILL.md) and [jobtread-budget-writing](..
 For vendor documents, budget-item allocation, compliance, attachments and payments, load the maintained [vendor workflow](../jobtread/references/vendor-orders-bills-payments.md). Do not maintain a second financial procedure here.
 
 Catalog records are reusable scope definitions, not live job budget records or approved customer baselines. Use [budget intake](../jobtread/references/budget-data-intake.md) when applying scope to a job; confirm target and approval before changing structure or financial values.
+
+## When to use
+
+Use for reusable catalog scope maintenance, not job-specific pricing or customer contract changes.
+
+## Pitfalls
+
+A catalog template is not an approved customer baseline. A rebuild requires scoped deletion authorization; never infer that from a naming cleanup.
+
+## Verification
+
+Read exact changed records and all affected children back, compare scope and blank/zero financial behavior, verify no project quantities/rates leaked into templates and no live budget or issued document changed unintentionally. Report removals and unresolved pricing separately.

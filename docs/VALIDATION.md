@@ -1,36 +1,13 @@
-# Initial rollout verification
+# Validation
 
-## Current module migration checks
+Run from checkout root:
 
-The later email/Surface/Dropbox source migration was checked offline with `python3 scripts/validate.py`, `python3 -m unittest discover -s tests -v` (13 passing tests), and `git diff --check`. The source set includes all seven installer-supported modules; migration provenance and limitations are recorded in [MIGRATED-SKILLS.md](MIGRATED-SKILLS.md).
+```sh
+python3 scripts/validate.py
+python3 -m unittest discover -s tests -v
+git diff --check
+```
 
-Shared-only installation linked the migrated skills and Dropbox into the canonical checkout. A fresh `hermes skills list --enabled-only` invocation reported `email-inbox-triage`, `cdb-surface-orders` and `cdb-dropbox-management` as enabled external skills after the independent local email/Surface copies were preserved and retired. Full private originals and evidence remain outside publication. No Hermes configuration or cron changes, new credentials, business mutations, commit or push were performed for this migration. This verifies filesystem/discovery behavior, not live business workflow execution or refresh of already-running sessions.
+Offline checks cover the eight JobTread policies, scheduling calculations, isolated-HOME installation/conflict backups/idempotency, selected dependencies, updater refusal and explicit fast-forward gates, lightweight email approval and absence of operations source from the public package. Synthetic tests require no business credentials.
 
-## Original rollout record
-
-Read-only and offline checks performed on 2026-11-13 for the initial CDB workflow-library rollout. This record contains no customer records, credentials or authorization identifiers.
-
-## Repository and installation
-
-- `python3 scripts/validate.py` passed structural metadata, JSON/example, relative-link and targeted credential-pattern checks.
-- `python3 -m unittest discover -s tests -v` passed three isolated-home installer tests: preflight conflict refusal, backed-up migration/shared discovery, and preservation of a dangling original link.
-- The shared skill hub and Hermes, Codex, Claude Code, omp and OpenCode skill paths resolved to the canonical Work checkout. Existing conflicting skill directories were backed up outside this repository.
-- A fresh omp print session discovered `jobtread`, `jobtread-budget-writing` and `jobtread-catalog-standards` through its actual available-skills surface.
-
-## Connection checks
-
-The workstation retained its existing authorized per-user Linux gateway; no credentials were copied into agent configuration or this repository.
-
-- Live MCP discovery exposed one `query` tool with an object-valued `query` input.
-- A live grant read matched the expected organization. Root-schema discovery returned 236 fields. Responses stayed outside the repository.
-- Claude Code 2.1.323 reported the configured JobTread connection connected.
-- Hermes CLI connection testing connected and discovered the query tool.
-- OpenCode 2.3.0 reported JobTread connected after configuration reload.
-- Codex CLI 0.169.0 and omp 18.20.0 configuration entries were exercised through their configured stdio executable/arguments: discovery, an authorized organization read, and fresh reconnection/read passed. This is transport verification, not a claim of model-driven business execution in both clients.
-- The gateway rejected an unauthenticated request with HTTP 401.
-
-## Limits
-
-No business records were created, edited, deleted, issued or sent. No payments, signatures, live financial/document workflow trials, new-user OAuth consent, hosted-assistant attachment flow, or gateway-service restart occurred. Direct official OAuth onboarding follows upstream documentation; existing local adapter reuse was the tested transport. Skill instructions guide agents but do not replace server permissions or approval controls.
-
-Inherited structural snapshots were reviewed as references; their original capture date/version is unknown. Live root discovery checks operation names and top-level keys, not every nested type, template, side effect or permission. Automated credential patterns cannot prove exhaustive privacy. See [schema provenance](../skills/jobtread/references/schema-notes.md) and [maintenance](MAINTAINING.md) for ongoing review requirements.
+Pattern scans do not establish exhaustive privacy. No new OAuth, live mailbox/Dropbox/JobTread write, memory migration, service restart or scheduled execution is established by this migration. Historical rollout evidence is preserved privately outside this package.

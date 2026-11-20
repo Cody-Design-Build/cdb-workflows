@@ -1,10 +1,14 @@
 ---
 name: jobtread
-description: Follow CDB workflows for JobTread budgets, proposals, preliminary proposals, change orders, subcontract agreements, vendor bills, payments, schedules and daily logs. Use for JobTread discovery, reads and authorized edits.
+description: Operate JobTread safely through authenticated MCP.
+version: 0.1.0
+author: David Cody, Hermes Agent
 license: MIT
+platforms: [linux, macos, windows]
 metadata:
-  author: Cody Design Build
-  version: "0.1.0"
+  hermes:
+    tags: [JobTread, Construction]
+    related_skills: []
 ---
 
 # Shared JobTread integration
@@ -17,9 +21,22 @@ For any vendor-order, vendor-bill, subcontractor-compliance or payment task, **r
 
 For every new-job request or incomplete job setup, you **must follow** [jobtread-job-setup](../jobtread-job-setup/SKILL.md), including duplicate checks, owner/property intake, plans, Dropbox reconciliation and the four-part verification handoff. Do not bypass it when the user has already created some records.
 
+For building or revising construction schedules, load [jobtread-scheduling](../jobtread-scheduling/SKILL.md) for date blocks, sequencing, and schedule verification.
+
+## Load only the workflow needed
+
+| Request | Load before acting |
+| --- | --- |
+| Ongoing job review, coordination or changes | [Job management](../jobtread-job-management/SKILL.md) |
+| Develop scope, quantities and estimate | [Estimating](../jobtread-estimating/SKILL.md) |
+| Site report or daily-log correction | [Daily logs](../jobtread-daily-logs/SKILL.md) |
+| Budget descriptions or catalog work | The writing/catalog modules linked below |
+
+For selective installations, resolve these stable skill names through client discovery. If a requested module is absent, install that module explicitly; do not improvise its policy. Do not load every schema or workflow for a narrow task.
+
 ## Connection and setup
 
-Connect to the official remote MCP at `https://api.jobtread.com/mcp` using your agent's supported authenticated connector. See [connection instructions](../../docs/CONNECTING.md). Each installation needs its own connection and authorization; this repository contains no credentials or transferable grants.
+Use the authenticated JobTread MCP end to end for all JobTread discovery, reads, edits, and verification. Do not open JobTread in a browser tab or desktop preview as part of a workflow, even as a convenience. Only open it if the user explicitly asks to see JobTread. If MCP does not support an operation, report the blocker instead of switching to browser automation or a direct JobTread API call. Where MCP returns an upload or download URL, transfer file bytes through that URL without opening a browser. Connect to the official remote MCP at `https://api.jobtread.com/mcp` using your agent's supported authenticated connector. See [connection instructions](../../docs/CONNECTING.md). Each installation needs its own connection and authorization; this repository contains no credentials or transferable grants.
 
 Discover the live `currentGrant.allowedActions` and organization. David wants full read/write/delete capability for authorized CDB work; do not silently downgrade requested access. Capability is not task-specific authorization. Never copy another application's tokens or expose secrets in prompts, logs or public files.
 
@@ -64,8 +81,8 @@ Load [jobtread-budget-writing](../jobtread-budget-writing/SKILL.md) for the main
 - Job stage and job closure are distinct: this organization uses a custom field named `Status`; inspect its current ID/options and patch via `updateJob.customFieldValues`. Do not assume a root `status` field. `closedOn` controls closure independently. A Won/Completed stage can intentionally remain open; preserve `closedOn` unless closing is requested.
 - Match the exact organization and project before reading or writing. Distinguish JobTread IDs, job numbers and document numbers.
 - Read existing records and discover schemas before preparing changes; check for duplicates before creates.
-- Ask for approval of exact target/content before external-facing documents, financial changes or bulk changes. Draft, review, then issue/send as separate steps.
-- David's deletion rule: obtain explicit approval before deleting anything larger than one line item. This includes multiple line items, cost groups, entire budgets, documents, jobs, accounts or other parent records, and cascading deletes. Show the exact targets and consequences first. A single leaf line-item deletion explicitly requested by David needs no redundant confirmation if its identity is clear and it has no cascading effects; this is not permission to delete unsolicited items. If scope or dependencies are uncertain, ask.
+- Treat David's clear, direct request as authorization for the JobTread writes it specifies, including scoped multi-record budget and draft schedule edits. Verify exact targets and consequences, then write and read back without asking him to repeat the approval. Ask only when a material target, scope, or consequence remains unresolved. Drafting does not authorize issuing, sending, publishing, notifying, or payment; those actions must be explicitly directed.
+- Delete only records whose removal David clearly authorizes. A direct request naming the records and making the consequences clear is sufficient; do not ask twice. Verify child records and linked effects before deleting a group or other parent. Ask before any additional or unclear cascading removal.
 - David explicitly wants full read/write/delete access for legitimate work. Do not downgrade it without his request. Permissions do not replace task-specific authorization or the deletion rule. JobTread warns deleted data cannot be restored.
 - After every authorized write, read the exact target back. An uncertain result requires reconciliation, not blind retry.
 - Preserve supplier documents and issued versions. A quote, owner selection, placed order, payment, shipment and receipt are different facts.

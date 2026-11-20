@@ -182,28 +182,6 @@ Tell the assistant to follow CDB's attached JobTread procedures, discover its ac
 
 This repository does not claim a native JobTread skill import or a universal hosted-assistant upload format.
 
-## Reuse an existing local Linux gateway only when needed
+## Existing adapters
 
-A previously configured Linux gateway can adapt the official OAuth MCP to a local authenticated HTTP endpoint and a stdio client. It is optional, belongs to one OS user, and is not required for any client that can authorize the official server directly. This repository does not ship or install that gateway.
-
-The inspected local adapter consists of `~/.local/share/jobtread-mcp/gateway.py`, `client.py`, and a pinned `requirements.lock`. The inspected lock pins FastMCP 4.1.4. `gateway.py` uses FastMCP’s upstream OAuth client, encrypts saved OAuth material under `~/.config/jobtread`, and binds a bearer-protected proxy to `127.0.0.1:8766`. `client.py` reads the local bearer credential from a protected file and proxies stdio to `http://127.0.0.1:8766/mcp`; it does not contain JobTread business tools.
-
-If that adapter already exists and works, configure a stdio server using its existing environment’s Python executable and the absolute path to `client.py`. Do not use system Python unless it has the adapter’s pinned dependencies. Substitute your actual home path for `/home/your_user` in this example:
-
-```json
-{
-  "mcpServers": {
-    "jobtread": {
-      "type": "stdio",
-      "command": "/home/your_user/.local/share/jobtread-mcp/.venv/bin/python",
-      "args": ["/home/your_user/.local/share/jobtread-mcp/client.py"]
-    }
-  }
-}
-```
-
-That entry shape applies to omp and Claude Code. Codex uses `command` and `args` under `[mcp_servers.jobtread]`; Hermes uses them under `mcp_servers.jobtread`. OpenCode V2 uses `type: "local"` with a single `command` array containing the executable and arguments under `mcp.servers.jobtread`. Choose either a direct or adapter entry for the same connection, not both.
-
-Do not copy this machine’s service files, grants, tokens, encryption keys, or authorization history to another machine or person. Keep credential files mode `600` and their directories mode `700`. Never bind the proxy to a LAN/public interface. An adapter deployment additionally requires checking rejection of unauthenticated requests, authenticated discovery/read, and restart/reconnect. Source inspection is not proof those runtime checks passed on your installation.
-
-The filesystem skill installer only creates discovery links. It never creates credentials or performs gateway installation, service setup, or OAuth consent.
+A working same-user local adapter can remain in place, but is optional and not installed by this package. Do not copy another user's service configuration, tokens, grants or authorization history. Prefer direct per-user official OAuth for new installations. Installation and updates must leave existing connections and credentials untouched.

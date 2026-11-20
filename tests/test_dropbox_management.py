@@ -21,8 +21,9 @@ class DropboxWorkflow(unittest.TestCase):
         self.assertNotRegex(text, r'\b\d{3,}\s+[A-Z][a-z]+\s+(?:Street|St|Avenue|Ave|Road|Rd)\b')
 
     def test_setup_links_to_filing_owner(self):
-        text = (ROOT / 'skills/jobtread-job-setup/SKILL.md').read_text()
-        self.assertIn('../cdb-dropbox-management/SKILL.md', text)
+        text = (ROOT / 'skills/cdb-dropbox-management/SKILL.md').read_text()
+        self.assertIn('../jobtread-job-setup/SKILL.md', text)
+        self.assertTrue((ROOT / 'skills/jobtread-job-setup').exists())
 
     def test_installer_exposes_dropbox_skill(self):
         with tempfile.TemporaryDirectory() as tmp:
