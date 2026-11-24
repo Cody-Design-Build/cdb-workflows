@@ -33,6 +33,13 @@ class Modules(unittest.TestCase):
             self.assertTrue(description.endswith('.'))
             self.assertIn('platforms:', front)
 
+    def test_core_has_resumable_workflow_and_partial_failure_contract(self):
+        text = (ROOT / 'skills/jobtread/SKILL.md').read_text()
+        for phrase in ['## Workflow checkpoints and recovery',
+                       'verified record IDs', 'completed, blocked and not attempted',
+                       'do not replay the whole batch', 'notification state']:
+            self.assertIn(phrase, text)
+
     def test_selective_install_includes_core_and_required_not_unrelated_modules(self):
         with tempfile.TemporaryDirectory() as tmp:
             home = Path(tmp)

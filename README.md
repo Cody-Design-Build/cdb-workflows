@@ -64,6 +64,6 @@ The updater refuses dirty, wrong-origin, detached, incorrectly tracked or diverg
 
 ## Maintenance and limits
 
-Read [MAINTAINER.md](MAINTAINER.md), [maintenance](docs/MAINTAINING.md), [provenance](docs/PROVENANCE.md), [validation](docs/VALIDATION.md) and [changelog](CHANGELOG.md). The short-lived jobtread-skills package is superseded; maintain JobTread only here.
+Read [MAINTAINER.md](MAINTAINER.md), [maintenance](docs/MAINTAINING.md), [provenance](docs/PROVENANCE.md), [validation](docs/VALIDATION.md) and [changelog](CHANGELOG.md). The short-lived jobtread-skills package is retired; maintain JobTread only here. Its complete eight-module feature set is preserved and extended here; see the [parity and migration record](docs/JOBTREAD-MIGRATION.md). Do not install or update from the old repository.
 
 Linux offline checks do not establish live OAuth, every client/version or business workflow correctness. Windows/macOS runtime is untested here; Windows symlinks may require Developer Mode. Original CDB source is [MIT](LICENSE); upstream schemas/trademarks retain their terms. Never publish private records, rates, identities, credentials, evidence or machine state.

@@ -1,5 +1,11 @@
 # Changelog
 
+## JobTread repository retirement
+
+- Verify all 23 JobTread skill/reference/helper files across eight modules match the retired package before extending core recovery guidance. No JobTread feature is dropped.
+- Strengthen private checkpoints, partial-failure reconciliation and outcome-based handoff, with an offline regression test.
+- Document canonical installation and migration before owner-authorized removal of the duplicate repository; preserve a private Git-history backup.
+
 ## Owner-approved consolidation
 
 - Consolidate latest eight JobTread modules, scheduling helper, installer/updater and tests here as canonical public source.

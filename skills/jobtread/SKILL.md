@@ -90,6 +90,14 @@ Load [jobtread-budget-writing](../jobtread-budget-writing/SKILL.md) for the main
 - Fetch all pages before claiming exhaustive results; aggregate and verify counts in code. Never expose credentials in prompts, logs or shared notes.
 - Use JobTread's grant name/history fields for audit. One shared upstream grant identifies the gateway, not necessarily the individual agent.
 
+## Workflow checkpoints and recovery
+
+For multi-record or multi-stage work, keep a private checkpoint in the task's approved working location, never this public repository. Record the requested outcome and authorization boundary, exact organization/job, source revision, verified record IDs and relationships, completed readbacks, and remaining dependent steps. Keep credentials and signed transfer URLs out of checkpoints; checkpoints are evidence, not a second business ledger.
+
+On interruption or a partial failure, re-read affected targets and reconcile the last uncertain write before continuing. Reuse verified IDs; do not replay the whole batch, blindly retry creates, or delete successful records to simulate a rollback. Stop dependent steps when a required parent, upload, attachment or readback is unverified. Continue only independent actions already authorized, and report completed, blocked and not attempted work separately.
+
+At handoff, compare the requested outcome with verified results, including relationships, relevant totals, uploaded plan-page coverage, issued/draft status and notification state. Distinguish source inspection, offline tests, a harmless connection read and actual workflow execution. Report the next decision or blocker without claiming broader live coverage.
+
 ## Official references
 
 - https://www.jobtread.com/integrations/ai-connector
